@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<doc>
+	<assembly>
+		<name>ApiControleDeFilmes</name>
+	</assembly>
+	<members>
+		<member name="M:ApiControleDeFilmes.Controllers.V1.FilmesController.Obter(System.Int32,System.Int32)">
+			<summary>
+				Buscar todos os filmes de forma paginada
+			</summary>
+			<remarks>
+				Não é possivel retornar os filmes sem paginação
+			</remarks>
+			<param name="pagina">Indica qual pagina está sendo consultada, mínimo 1</param>
+			<param name="quantidade">Indica a quantidade de registros por pagina, mínimo 1 e máximo 50</param>
+			<response code="200">Retorna a lista de filmes</response>
+			<response code="204">Caso não houver filmes cadastrados</response>
+		</member>
+		<member name="M:ApiControleDeFilmes.Controllers.V1.FilmesController.Obter(System.Guid)">
+			<summary>
+				Buscar um filme por seu Id
+			</summary>
+			<param name="idFilme">Id do filme a ser buscado</param>
+			<response code="200">Retorna o filme filtrado</response>
+			<response code="204">Caso não houver filmes cadastrados</response>
+		</member>
+		<member name="M:ApiControleDeFilmes.Controllers.V1.FilmesController.InserirFilme(ApiControleDeFilmes.InputModel.FilmeInputModel)">
+			<summary>
+				Cadastra um novo filme
+			</summary>
+			<param name="filmeInputModel">Dados necessarios do filme a ser cadastrado</param>
+			<response code="200">Filme cadastrado</response>
+			<returns></returns>
+		</member>
+		<member name="M:ApiControleDeFilmes.Controllers.V1.FilmesController.AtualizarFilme(System.Guid,ApiControleDeFilmes.InputModel.FilmeInputModel)">
+			<summary>
+				Faz a alteração do filme encontrado pelo Id
+			</summary>
+			<param name="idFilme">Id do filme a ser alterado</param>
+			<param name="filmeInputModel">Busca o modelo de dados a serem alterados</param>
+			<response code="200">Atualiza o cadastro do filme</response>
+			<response code="204">Caso não tiver filme cadastrado com este Id</response>
+		</member>		
+		<member name="M:ApiControleDeFilmes.Controllers.V1.FilmesController.ApagarFilme(System.Guid)">
+			<summary>
+				Deleta o registro do filme
+			</summary>
+			<param name="idFilme">Id do filme a ser deletado</param>
+			<response code="200">Filme deletado com sucesso</response>
+		</member>
+	</members>
+</doc>
