@@ -25,7 +25,7 @@ namespace ApiControleDeFilmes.Repositories
 
             await sqlConnection.OpenAsync();
             SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
-            DbDataReader sqlDataReader = await sqlCommand.ExecuteReaderAsync();
+            SqlDataReader sqlDataReader = await sqlCommand.ExecuteReaderAsync();
 
             while (sqlDataReader.Read())
             {
@@ -51,7 +51,7 @@ namespace ApiControleDeFilmes.Repositories
 
             await sqlConnection.OpenAsync();
             SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
-            DbDataReader sqlDataReader = await sqlCommand.ExecuteReaderAsync();
+            SqlDataReader sqlDataReader = await sqlCommand.ExecuteReaderAsync();
 
             while (sqlDataReader.Read())
             {
@@ -77,7 +77,7 @@ namespace ApiControleDeFilmes.Repositories
 
             await sqlConnection.OpenAsync();
             SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
-            DbDataReader sqlDataReader = await sqlCommand.ExecuteReaderAsync();
+            SqlDataReader sqlDataReader = await sqlCommand.ExecuteReaderAsync();
 
             while (sqlDataReader.Read())
             {
@@ -101,7 +101,7 @@ namespace ApiControleDeFilmes.Repositories
 
             await sqlConnection.OpenAsync();
             SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
-            DbDataReader sqlDataReader = await sqlCommand.ExecuteReaderAsync();
+            SqlDataReader sqlDataReader = await sqlCommand.ExecuteReaderAsync();
             await sqlConnection.CloseAsync();
         }
 
@@ -111,7 +111,7 @@ namespace ApiControleDeFilmes.Repositories
 
             await sqlConnection.OpenAsync();
             SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
-            DbDataReader sqlDataReader = await sqlCommand.ExecuteReaderAsync();
+            SqlDataReader sqlDataReader = await sqlCommand.ExecuteReaderAsync();
             await sqlConnection.CloseAsync();
         }
 
@@ -121,7 +121,7 @@ namespace ApiControleDeFilmes.Repositories
 
             await sqlConnection.OpenAsync();
             SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
-            DbDataReader sqlDataReader = await sqlCommand.ExecuteReaderAsync();
+            SqlDataReader sqlDataReader = await sqlCommand.ExecuteReaderAsync();
             await sqlConnection.CloseAsync();
         }
 
